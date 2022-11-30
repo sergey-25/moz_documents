@@ -1,13 +1,55 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+    font-family: 'HelveticaNeueCyr';
+    src: local('HelveticaNeueCyr'), url(./asets/HelveticaNeueCyr-Light.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Akrobat';
+    src: local('Akrobat'), url(./asets/Akrobat_Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'HelveticaNeueCyr';
+    src: local('HelveticaNeueCyr'), url(./asets/HelveticaNeueCyr-Roman.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Akrobat-SemiBold';
+    src: local('Akrobat-SemiBold'), url(./asets/Akrobat-SemiBold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'BebasNeue';
+    src: local('BebasNeue'), url(./asets/BebasNeueRegular.ttf) format('truetype');
+}
+h2{
+    font-family: Akrobat-SemiBold, serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h3, span{
+    font-family: HelveticaNeueCyr, light, serif;
 }
+h4{
+    font-family: Akrobat-SemiBold, serif;
+    font-size: 22px;
+    line-height: 30px;
+    letter-spacing: 0;
+}
+h5{
+    font-family: Akrobat,bold, serif;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: .05em;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
+}
+

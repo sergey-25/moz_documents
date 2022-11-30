@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: local('BebasNeueRegular'), url(./asets/BebasNeueRegular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Akrobat';
+    src: local('Akrobat'), url(./asets/Akrobat_Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'BebasNeue';
+    src: local('BebasNeue'), url(./asets/bebasneuecyrillic.ttf) format('truetype');
+}
+.nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav__item {
+    line-height: 21px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav__item {
+    display: inline-block;
+    padding: 19px 30px 20px;
+    position: relative;
+    transition: color .3s;
+    font-family: Akrobat-Bold, serif;
+    letter-spacing: .05em;
+    white-space: nowrap;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav__item:after {
+    display: inline-block;
+    content: '';
+    width: 1px;
+    height: 10px;
+    background-color: #a8a9ad;
+    position: absolute;
+    top: 24px;
+    right: 0;
+    transition: .3s;
 }
 
-.App-link {
-  color: #61dafb;
+.font_gray-dark-to-black {
+    color: #5a5858;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.font_upper {
+    text-transform: uppercase;
+}
+.active {
+    position: relative;
+    right: 1px;
+    padding: 19px 30px 20px;
+    background-color: #48b7d5;
+    color: #fff;
+    font-family: Akrobat-Bold, serif;
+}
+.nav__item:hover {
+    color: #48b7d5;
+}
+
+.nav__item:hover:after {
+    background-color: #48b7d5;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+.active:hover {
+    color: #fff!important;
+}
+.active-button{
+    position: relative;
+    color: #48b7d5 !important;
+}
+.active-button:after{
+    display: inline-block;
+    content: '';
+    width: 1px;
+    height: 10px;
+    background-color: #a8a9ad;
+    position: absolute;
+    top: 24px;
+    right: 0;
+    transition: .3s;
+}
+.footer__logo-svg-icon-st0 {
+    fill: #8A8B90;
+}
+.footer__logo-svg-icon-st1 {
+    font-family: BebasNeue, regular
+}
+.footer__logo-svg-icon-st2 {
+    font-size: 60px;
+}
+.footer__logo-svg-icon-st3 {
+    fill: #8A8B90;
+}
+.footer__logo-svg-icon-st4 {
+    fill: #8A8B90;
 }
