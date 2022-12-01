@@ -83,8 +83,8 @@ function App() {
         const regEx = /[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
         if (!regEx.test(String(e.target.value).toLowerCase()) && isShown) {
             setIsError('Значення "Email" не є правильною email адресою".')
-            if (e.target.value === ''&& !isShown) {
-                setTimeout(() =>  setIsError('Необхідно заповнити "Email".'), 5000);
+            if (e.target.value === '' && !isShown) {
+                setTimeout(() => setIsError('Необхідно заповнити "Email".'), 5000);
             }
         } else {
             setIsError('')
@@ -174,6 +174,7 @@ function App() {
                                         onMouseEnter={() => setIsShown(true)}
                                         onMouseLeave={() => setIsShown(false)}
                                         sx={isError ? {
+
                                                 // '& .MuiInputBase-root:hover':{
                                                 //
                                                 // },
