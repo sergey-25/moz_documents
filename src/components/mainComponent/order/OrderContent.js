@@ -1,6 +1,4 @@
 import React from 'react';
-import {useParams} from "react-router-dom";
-import {useStateContext} from "../../../contexts/dataContext";
 import {
     ArticleLinks,
     BlockTitle,
@@ -10,38 +8,25 @@ import {
     DocumentTitle,
     MedicalContainer,
     MedicalWrapper,
-    PressEmail,
-    PressEmailBgText,
-    PressEmailCnt,
-    PressEmailHeading,
-    PressForm,
-    PressIcon,
-    PressSubscribe,
-    PressWrapperBg,
-    PressWrapperNoMargin,
     ServiceLine,
     ShareContainer
 } from "../../../styles/containers.styled";
-import {Button, createTheme, Divider, Icon, Link} from "@mui/material";
+import { createTheme, Divider, Icon, Link} from "@mui/material";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
-import CloseIcon from '@mui/icons-material/Close';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faFacebookF, faGooglePlusG, faLinkedinIn} from "@fortawesome/free-brands-svg-icons";
 import {faFileContract} from "@fortawesome/free-solid-svg-icons";
-import BasicPopover from "../../BasicPopover";
 
 
 const myArray = ["dn_2113_21112022 (pdf, 143 Кб)", "dn_2113_21112022_dod (pdf, 124 Кб)"];
 
 function OrderContent(props) {
-    const {data} = useStateContext();
 
-    const params = useParams();
+    // const params = useParams();
 
-    const itemId = params.title;
+    // const itemId = params.title;
 
-    const thisItem = data.find(prod => prod.title === itemId);
+    // const thisItem = data.find(prod => prod.title === itemId);
 
     const theme = createTheme({
         breakpoints: {
@@ -55,13 +40,7 @@ function OrderContent(props) {
         },
     });
 
-    const {
-        handleClick,
-        handleClose,
-        open,
-        id,
-        anchorEl
-    } = useStateContext();
+
 
     const icon = <FontAwesomeIcon icon={faFacebookF}/>
     const iconGoogle = <FontAwesomeIcon icon={faGooglePlusG} className="fa-brands fa-google-plus-g  fa-xs"/>
@@ -141,43 +120,6 @@ function OrderContent(props) {
                     </a>
                 </ArticleLinks>
                 <Divider sx={{marginBottom: '30px'}}/>
-                {/*<PressWrapperNoMargin>*/}
-                {/*    <PressWrapperBg>*/}
-                {/*        <PressSubscribe>*/}
-                {/*            <PressEmail>*/}
-                {/*                <PressEmailBgText>*/}
-                {/*                    Email*/}
-                {/*                </PressEmailBgText>*/}
-                {/*                <PressEmailCnt>*/}
-                {/*                    <PressEmailHeading>*/}
-                {/*                        ПІДПИСАТИСЯ*/}
-                {/*                    </PressEmailHeading>*/}
-                {/*                    <PressIcon disableRipple*/}
-                {/*                               aria-describedby={id}*/}
-                {/*                               onClick={handleClick}*/}
-                {/*                    >*/}
-                {/*                        <BasicPopover*/}
-                {/*                            id={id}*/}
-                {/*                            open={open}*/}
-                {/*                            onClose={handleClose}*/}
-                {/*                            anchorEl={anchorEl}*/}
-                {/*                            handleClick={handleClick}*/}
-                {/*                        />*/}
-                {/*                        <QuestionMarkIcon*/}
-                {/*                            sx={{*/}
-                {/*                                fontSize: '11px'*/}
-                {/*                            }}*/}
-                {/*                        />*/}
-                {/*                    </PressIcon>*/}
-                {/*                </PressEmailCnt>*/}
-                {/*            </PressEmail>*/}
-                {/*            <PressForm>*/}
-
-                {/*            </PressForm>*/}
-                {/*            dfsfdsfsfsdf*/}
-                {/*        </PressSubscribe>*/}
-                {/*    </PressWrapperBg>*/}
-                {/*</PressWrapperNoMargin>*/}
             </MedicalWrapper>
             <ShareContainer theme={theme}>
                 <BlockTitle theme={theme}>

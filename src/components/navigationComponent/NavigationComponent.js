@@ -2,7 +2,7 @@ import React from 'react';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import {ResponsiveTab, ResponsiveTabList, TabCustom} from "../../styles/tab.styled";
-import {Box, Container, createTheme, Dialog, Icon, Slide, useTheme} from "@mui/material";
+import {Box, Container, createTheme, Dialog, Icon, Slide} from "@mui/material";
 import BreadcrumbsControl from "../controls/BreadcrumbsControl";
 import {useLocation} from "react-router-dom";
 import '../../asets/Akrobat_Bold.ttf'

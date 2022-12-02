@@ -529,12 +529,12 @@ export const PressForm = styled('form')(({theme}) => ({
 }));
 
 export const PressFormInput = styled(TextField)({
-    '& .MuiOutlinedInput-notchedOutline':{
-        borderRadius:0,
+    '& .MuiOutlinedInput-notchedOutline': {
+        borderRadius: 0,
     },
 
     '& .MuiInputBase-root': {
-        color:'#000',
+        color: '#000',
         fontStyle: 'italic',
         fontSize: '15px',
         backgroundColor: '#fff',
