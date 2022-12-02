@@ -5,7 +5,6 @@ import {useLocation, useNavigate} from "react-router-dom";
 import {Link} from "@mui/material";
 
 
-
 function BreadcrumbsControl(props) {
 
     const location = useLocation();
@@ -16,7 +15,7 @@ function BreadcrumbsControl(props) {
     return (
         <div role="presentation">
             <Breadcrumbs
-                maxItems={2}
+                // maxItems={4}
                 sx={{fontSize: '10px'}}
                 separator="|"
                 size="sm"
@@ -41,21 +40,30 @@ function BreadcrumbsControl(props) {
                     return isLast ? (
                         <BreadcrumbLink
                             underline="none" color="inherit"
-                            key={name}>{name === 'nakazi-moz'
-                            ?
-                            ' Накази МОЗ'
-                            :
-                            name === 'nakazi-moz-scho-projshli-derzhavnu-reestraciju-v-minjusti'
-                                ? 'Накази МОЗ, що пройшли державну реєстрацію в Мін’юсті'
-                                : ''
-                        }</BreadcrumbLink>
-                    ) : (
-                        <Link key={name} onClick={() => {
-                            navigate(routeTo)
-                        }}>
-                            {name}
-                        </Link>
-                    );
+                            key={name}>
+
+                            {name === 'nakazi-moz'
+                                ?
+                                ' Накази МОЗ'
+                                :
+                                name === 'nakazi-moz-scho-projshli-derzhavnu-reestraciju-v-minjusti'
+                                    ? 'Накази МОЗ, що пройшли державну реєстрацію в Мін’юсті'
+                                    : routeTo.includes('article' || 'ministry-mandates')
+                                        ? name.replace(/[0-9._%+-]/g, ' ')
+                                        : null
+                            }
+                        </BreadcrumbLink>
+                    ) : location.pathname === 'article' ?
+                        (
+                            <>
+                                <Link key={name} onClick={() => {
+                                    navigate(routeTo)
+                                }}>
+
+                                    {name}
+                                </Link>
+                            </>
+                        ) : null
                 })}
             </Breadcrumbs>
         </div>

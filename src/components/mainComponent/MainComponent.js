@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import {Box, createTheme, useTheme} from "@mui/material";
+import {Box, createTheme} from "@mui/material";
 import {ButtonGroupStyled, GroupStyledButton} from "../../styles/button.styled";
 import {AccordionStyled, StyledAccordionSummary} from "../../styles/accordion.styled";
 import {useLocation, useNavigate} from "react-router-dom";

@@ -49,7 +49,7 @@ function FooterComponent(props) {
     });
 
     const icon = <FontAwesomeIcon icon={faFacebookF}/>
-console.log(theme)
+
     return (
         <FooterBoxMain>
             <Container disableGutters={true} maxWidth="xl">

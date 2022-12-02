@@ -19,6 +19,7 @@ export const AccordionStyled = styled(Accordion)({
         color: '#fff'
     }
 });
+
 export const StyledAccordionSummary = styled(AccordionSummary)({
     color: '#5a5858',
     paddingTop: '14px',

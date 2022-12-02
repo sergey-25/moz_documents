@@ -55,6 +55,10 @@ function App() {
         setAnchorEl(null);
     };
 
+    const handleSubmit = () => {
+       alert(email)
+    }
+
     const open = Boolean(anchorEl);
     const id = open ? 'simple-popover' : undefined;
 
@@ -77,6 +81,7 @@ function App() {
             ].join(','),
         },
     });
+
 
     const handleEmail = (e) => {
         setEmail(e.target.value)
@@ -198,7 +203,7 @@ function App() {
 
                                     />
                                 </PressForm>
-                                <PressFormButton disableRipple>
+                                <PressFormButton disableRipple onClick={handleSubmit}>
                                     <PressFormSpan>
                                         <h5>
                                             ПІДПИСАТИСЯ
